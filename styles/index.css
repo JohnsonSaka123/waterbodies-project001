@@ -37,6 +37,87 @@ header ul a:hover{
   display: none;
 }
 
+.hero-section{
+  display: relative;
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  animation: slideshow 15s infinite;
+}
+
+.overlay{
+  display: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffff;
+  padding: 20px;
+}
+.overlay h1{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.overlay p{
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: "Poppins",
+    serif;
+}
+
+.btn{
+  background-color: #0C7CE8;
+  padding: 12px 24px;
+  font-family: "Poppins",
+    serif;
+    font-size: 1.2rem;
+
+  border-radius: 4px;
+}
+
+
+@keyframes slideshow {
+  0% {
+    background-image: url('/images/lakes-1.jpg');
+  }
+
+  33% {
+    background-image: url('/images/lagoons.jpg');
+  }
+
+  66% {
+    background-image: url('/images/waterfalls.jpg');
+  }
+
+  100% {
+    background-image: url('/images/River-1.jpg');
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media( max-width : 768px){
  header nav{
@@ -69,6 +150,21 @@ header ul a:hover{
  }
  header nav.active{
   display: block;
+ }
+ .overlay{
+  padding: 10px;
+  text-align: center;
+ }
+
+ .overlay h1{
+  font-size: 1.5rem;
+ }
+ .overlay p{
+  font-size: 1rem;
+ }
+ .btn{
+  padding: 10px 20px;
+  font-size: 1rem;
  }
 }
 
