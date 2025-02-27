@@ -140,7 +140,8 @@ header ul a:hover{
   justify-content: center;
   flex-direction: column;
   margin-bottom: 4rem;
-
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .featured-waterbodies h2{
   margin-bottom: 1rem;
@@ -149,14 +150,13 @@ header ul a:hover{
   font-family: "Lato",
     serif;
   font-style: normal;
-  margin-left: 5px;
 }
 .list-of-waterbodies{
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .list-of-waterbodies .card{
   width: 300px;
@@ -174,7 +174,7 @@ header ul a:hover{
   width: 100%;
   object-fit: cover;
 }
-.feature-titl{
+.feature-title{
   font-size: 1.5rem;
   margin: 16px 0 8px 0;
 }
@@ -195,12 +195,18 @@ header ul a:hover{
 
 .footer{
   background-color: #0077B6;
-  padding: 20px 16px;
+  padding: 20px  16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
 }
 .footer-1{
   display: flex;
   width: 80%;
   justify-content: space-between;
+  
 }
 .logo-footer h1{
   color: #fff;
@@ -310,11 +316,38 @@ header ul a:hover{
   font-size: 1rem;
   line-height: 160%;
  }
+ .list-of-waterbodies .card{
+  width: 250px;
+ }
+ .list-of-waterbodies {
+  gap: 15px;
+ }
+ .list-of-waterbodies .feature-title{
+  font-size: 1rem;
+ }
+ .list-of-waterbodies .feature-descrip{
+  font-size: 0.9rem;
+ }
+ .feature-btn{
+  font-size: 0.8rem;
+  padding: 5px 10px;
+ }
 }
 
 @media(max-width: 480px){
   header .logo{
     font-size: 24px;
+  }
+  .footer-1{
+    width: 100%;
+  }
+    
+  .logo-footer h1{
+    margin-right: 15px;
+    text-align: center;
+  }
+  .list-of-waterbodies{
+    flex-direction: row;
   }
 }
 
