@@ -99,7 +99,6 @@ header ul a:hover{
 }
 
 .about-section{
-  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +106,7 @@ header ul a:hover{
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 40px;
-  background-image: url("../images/waterfalls.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/waterfalls.jpg");
   background-size: cover;
   background-position: justify;
   background-attachment: no-attachment;
@@ -122,7 +121,7 @@ header ul a:hover{
     serif;
   font-size: 1.2rem;
   text-align: center;
-  color: #90E0EF;
+  color: #E0FFFF;
 }
 .about-section p::first-letter{
   font-size: 2rem;
@@ -132,7 +131,7 @@ header ul a:hover{
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #90E0EF;
+  color: #E0FFFF;
 }
 .featured-waterbodies{
   display: flex;
@@ -346,9 +345,9 @@ header ul a:hover{
     margin-right: 15px;
     text-align: center;
   }
-  .list-of-waterbodies{
-    flex-direction: row;
-  }
+  
+  
+  
 }
 
 
