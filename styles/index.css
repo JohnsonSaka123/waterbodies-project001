@@ -101,7 +101,7 @@ header ul a:hover{
   }
 }
 
-.about-section{
+#about-section{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -117,7 +117,7 @@ header ul a:hover{
   height: 70vh;
   margin-bottom: 2rem;
 }
-.about-section p{
+#about-section p{
   line-height: 150%;
   font-weight: 500;
   font-family: "Poppins",
@@ -126,11 +126,11 @@ header ul a:hover{
   text-align: center;
   color: #E0FFFF;
 }
-.about-section p::first-letter{
+#about-section p::first-letter{
   font-size: 2rem;
 }
 
-.about-section h2{
+#about-section h2{
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 20px;
