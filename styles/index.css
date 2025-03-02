@@ -226,6 +226,12 @@ header ul a:hover{
   font-family: "Roboto",
     sans-serif;
 }
+
+.nav-links_main ul li a:hover{
+  color: #90E0EF;
+  border-bottom: 2px solid #90E0EF;
+}
+
 .policy-section ul li{
   list-style: none;
   padding-bottom: 10px;
@@ -240,6 +246,7 @@ header ul a:hover{
 .footer-2{
   color: #fff;
   font-weight: 700;
+  align-self: center;
 }
 
 
