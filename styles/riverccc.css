@@ -1,0 +1,369 @@
+header{
+  color: #ffff;
+  background-color: #0077B6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header h1{
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+}
+
+header nav ul{
+  display: flex;
+  list-style: none;
+  align-items: flex-start;
+  justify-content: center;
+}
+header ul a{
+  font-size: 16px;
+  font-family: "Roboto",
+    sans-serif;
+  font-weight: 500;
+  padding: 12px 13px;
+}
+
+header ul a:hover{
+  color: #90E0EF;
+  border-bottom: 2px solid #90E0EF;
+}
+
+.harmburger{
+  display: none;
+}
+
+/*.hero-section{
+  display: relative;
+  width: 100%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  animation: slideshow 15s infinite;
+}
+
+.overlay{
+  display: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffff;
+  padding: 20px;
+}
+.overlay h1{
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.overlay p{
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-family: "Poppins",
+    serif;
+}
+
+.btn{
+  background-color: #0C7CE8;
+  padding: 12px 24px;
+  font-family: "Poppins",
+    serif;
+    font-size: 1.2rem;
+
+  border-radius: 4px;
+}
+*/
+
+/*@keyframes slideshow {
+  0% {
+    background-image: url('../images/lakes-1.jpg');
+  }
+
+  33% {
+    background-image: url('../images/lagoons.jpg');
+  }
+
+  66% {
+    background-image: url('../images/waterfalls.jpg');
+  }
+
+  100% {
+    background-image: url('../images/River-1.jpg');
+  }
+}
+  */
+
+#about-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 40px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Mississippi-River-North-America.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-attachment: no-attachment;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#about-section p{
+  line-height: 150%;
+  font-weight: 500;
+  font-family: "Poppins",
+    serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #E0FFFF;
+}
+#about-section p::first-letter{
+  font-size: 2rem;
+}
+
+#about-section h2{
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #E0FFFF;
+}
+.featured-waterbodies{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.featured-waterbodies h2{
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 150%;
+  font-family: "Lato",
+    serif;
+  font-style: normal;
+}
+.list-of-waterbodies{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.list-of-waterbodies .card{
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  font-family: "Poppins",
+    serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+.feature-image{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.feature-title{
+  font-size: 1.5rem;
+  margin: 16px 0 8px 0;
+}
+.feature-descrip{
+  line-height: 1.5;
+  font-size: 1rem;
+  margin: 0 16px 16px 16px;
+}
+.feature-btn{
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: #90E0EF;
+  padding: 8px 16px;
+  margin-bottom: 1rem;
+}
+
+.footer{
+  background-color: #0077B6;
+  padding: 20px  16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.footer-1{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  
+}
+.logo-footer h1{
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+
+}
+.nav-links_main ul li{
+  list-style: none;
+  padding-bottom: 10px;
+}
+.nav-links_main  ul li a{
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Roboto",
+    sans-serif;
+}
+
+.nav-links_main ul li a:hover{
+  color: #90E0EF;
+  border-bottom: 2px solid #90E0EF;
+}
+
+.policy-section ul li{
+  list-style: none;
+  padding-bottom: 10px;
+}
+.policy-section ul li a{
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Roboto",
+    sans-serif;
+}
+
+.footer-2{
+  color: #fff;
+  font-weight: 700;
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media( max-width : 768px){
+ header nav{
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background-color: #0077B6;
+  text-align: center;
+ }
+
+ header nav ul{
+  flex-direction: column;
+  padding: 0;
+ }
+ header nav ul li{
+  margin: 16px 0;
+ }
+
+ header ul a{
+  padding: 10px;
+  display: block;
+ }
+ 
+ .harmburger{
+  display: block;
+  cursor: pointer;
+  font-size: 24px;
+ }
+ header nav.active{
+  display: block;
+ }
+ .overlay{
+  padding: 10px;
+  text-align: center;
+ }
+
+ .overlay h1{
+  font-size: 1.5rem;
+ }
+ .overlay p{
+  font-size: 1rem;
+ }
+ .btn{
+  padding: 10px 20px;
+  font-size: 1rem;
+ }
+
+ .about-section h2{
+  font-size: 2rem;
+  margin-bottom: 10px;
+ }
+ .about-section p{
+  font-size: 1rem;
+  line-height: 160%;
+ }
+ .list-of-waterbodies .card{
+  width: 250px;
+ }
+ .list-of-waterbodies {
+  gap: 15px;
+ }
+ .list-of-waterbodies .feature-title{
+  font-size: 1rem;
+ }
+ .list-of-waterbodies .feature-descrip{
+  font-size: 0.9rem;
+ }
+ .feature-btn{
+  font-size: 0.8rem;
+  padding: 5px 10px;
+ }
+}
+
+@media(max-width: 480px){
+  header .logo{
+    font-size: 24px;
+  }
+  .footer-1{
+    width: 100%;
+  }
+    
+  .logo-footer h1{
+    margin-right: 15px;
+    text-align: center;
+  }
+  
+  
+  
+}
+
+
+
+
+
