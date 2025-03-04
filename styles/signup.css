@@ -1,0 +1,149 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: "Roboto",
+    sans-serif;
+  margin: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-up_container{
+  display: flex; 
+  gap: 1rem;
+  max-width: 1200px;
+    /* Limit container width for larger screens */
+  width: 100%;
+}
+.sign-up_section{
+  flex: 1;
+}
+.sign-up_section h1{
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+}
+.sign-up_section p{
+  font-weight: 400;
+  font-size: 15px;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+.google-sign_up{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  background-color: cornflowerblue;
+  border: none;
+  border-radius: 4px;
+  padding: 0.4rem;
+  color: #ffff;
+  font-style: normal;
+}
+
+.google-sign_up:hover{
+  background-color: #4d8be6;
+}
+
+.google-sign_up img{
+  width: 30px;
+  height: 30px;
+  max-inline-size: 100%;
+  block-size: auto;
+  margin-right: 8px;
+}
+form{
+  margin-bottom: 1rem;
+}
+.form-group{
+  margin-bottom: 0.8rem;
+}
+.form-group label{
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 2px;
+  display: block;
+}
+.form-group input{
+  width: 100%;
+  padding:  0.5rem;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.term-section{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.term-section p{
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.sign-up_btn{
+  width: 100%;
+  cursor: pointer;
+  color: white;
+  background-color: #000;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.sign-up_btn:hover{
+  background-color: #333;
+}
+.already a{
+  text-decoration: none;
+  margin-left: 4px;
+  color: #000;
+}
+.already a:hover{
+  color: cornflowerblue;
+}
+.sign-up_background{
+  flex: 2;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.slideshow{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.slideshow img{
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.slideshow img.active {
+  opacity: 1;
+  /* Show active image */
+}
+
+/*.sign-up_background img{
+  max-inline-size: 100%;
+  object-fit: cover;
+  block-size: auto;
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+}*/
