@@ -10,6 +10,8 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
 }
 .sign-up_container{
   display: flex; 
@@ -125,25 +127,16 @@ form{
 }
 .slideshow img{
   width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 .slideshow img.active {
   opacity: 1;
-  /* Show active image */
 }
 
-/*.sign-up_background img{
-  max-inline-size: 100%;
-  object-fit: cover;
-  block-size: auto;
-  width: 100%;
-  height: 80%;
-  border-radius: 8px;
-}*/
