@@ -1,3 +1,4 @@
+/* CSS for Individual Rivers Page */
 header{
   color: #ffff;
   background-color: #0077B6;
@@ -40,7 +41,7 @@ header ul a:hover{
   display: none;
 }
 
-/*.hero-section{
+.hero-section{
   display: relative;
   width: 100%;
   height: 80vh;
@@ -81,26 +82,40 @@ header ul a:hover{
 
   border-radius: 4px;
 }
-*/
 
-/*@keyframes slideshow {
-  0% {
-    background-image: url('../images/lakes-1.jpg');
+
+@keyframes slideshow {
+  5% {
+    background-image: url('../images/river\ nile\ 1.jpeg');
   }
 
-  33% {
-    background-image: url('../images/lagoons.jpg');
+  14% {
+    background-image: url('../images/river\ nile\ 2.jpeg');
   }
 
-  66% {
-    background-image: url('../images/waterfalls.jpg');
+  28% {
+    background-image: url('../images/river\ nile\ 3.jpeg');
   }
 
+  42% {
+    background-image: url('../images/river\ nile\ 4.jpeg');
+  }
+
+  56% {
+    background-image: url('../images/river\ nile\ 5.jpeg');
+  }
+
+  70% {
+    background-image: url('../images/river\ nile\ 6.jpeg');
+  }
+
+  84% {
+    background-image: url('../images/river\ nile\ 7.jpeg');
+  }
   100% {
-    background-image: url('../images/River-1.jpg');
+    background-image: url('../images/river\ nile\ 8.jpeg');
   }
 }
-  */
 
 #hero-section_rivers{
   display: flex;
@@ -164,7 +179,7 @@ header ul a:hover{
 }
 .list-of-rivers .card{
   max-width: 300px;
-  height: 550px;
+  height: 500px;
   width: 100%;
   overflow: hidden;
   border: 1px solid #ddd;
