@@ -222,8 +222,28 @@ header ul a:hover{
   color: #fff;
 }
 
+.video-section{
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 0rem;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.video-section_1{
+  height: 500px;
+  width: 500px;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  padding-left: 10px;
+  padding-right: 5px;
+}
 .video-container {
-  position: flex;
+  display:flex;
   width: 100%;
   max-width: 700px; /* Adjust as needed */
   border-radius: 15px;
@@ -235,43 +255,20 @@ header ul a:hover{
 /* Video styling */
 .video-container video {
   width: 100%;
-  display: block;
+  display:flex;
   border-radius: 15px;
 }
 
-/* Play button overlay */
-.play-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+.video-section_2{
+  height: 500px;
+  width: 500px;
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: center;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-/* Play button hover effect */
-.play-button:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
-/* Play icon */
-.play-button::before {
-  content: "▶";
-  font-size: 24px;
-  color: white;
-  font-weight: bold;
-}
-
-/* Hide play button when video plays */
-.video-container video.playing + .play-button {
-  display: none;
+  flex-direction: column;
+  margin-bottom: 0rem;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 
 .footer{
