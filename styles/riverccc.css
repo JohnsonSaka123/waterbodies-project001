@@ -179,6 +179,7 @@ header ul a:hover{
   height: 200px;
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 .feature-title{
   font-size: 1.5rem;
@@ -305,40 +306,29 @@ header ul a:hover{
  header nav.active{
   display: block;
  }
- .overlay{
-  padding: 10px;
-  text-align: center;
- }
-
- .overlay h1{
-  font-size: 1.5rem;
- }
- .overlay p{
-  font-size: 1rem;
- }
  .btn{
   padding: 10px 20px;
   font-size: 1rem;
  }
 
- .about-section h2{
+ .hero-section_rivers h2{
   font-size: 2rem;
   margin-bottom: 10px;
  }
- .about-section p{
+ .hero-section_rivers p{
   font-size: 1rem;
   line-height: 160%;
  }
- .list-of-waterbodies .card{
+ .list-of-rivers .card{
   width: 250px;
  }
- .list-of-waterbodies {
+ .list-of-rivers {
   gap: 15px;
  }
- .list-of-waterbodies .feature-title{
+ .list-of-rivers  .feature-title{
   font-size: 1rem;
  }
- .list-of-waterbodies .feature-descrip{
+ .list-of-rivers .feature-descrip{
   font-size: 0.9rem;
  }
  .feature-btn{
