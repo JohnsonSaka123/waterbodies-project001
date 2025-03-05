@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    font-family: "Roboto",
+      sans-serif;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .login_container{
+    display: flex; 
+    gap: 1rem;
+    max-width: 1200px;
+      /* Limit container width for larger screens */
+    width: 100%;
+  }
+  .login_section{
+    flex: 1;
+  }
+  .login_section h1{
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+  }
+  .login_section p{
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+  .google-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 4px;
+    padding: 0.4rem;
+    color: #ffff;
+    font-style: normal;
+  }
+  
+  .google-login:hover{
+    background-color: #4d8be6;
+  }
+  
+  .google-login img{
+    width: 30px;
+    height: 40px;
+    max-inline-size: 100%;
+    block-size: auto;
+    margin-right: 8px;
+  }
+  form{
+    margin-bottom: 1rem;
+  }
+  .form-group{
+    margin-bottom: 2rem;
+  }
+  .form-group label{
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 2px;
+    display: block;
+  }
+  .form-group input{
+    width: 100%;
+    padding:  0.5rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  .term-section{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .term-section p{
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .sign-up_btn{
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    background-color: #000;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  
+  .sign-up_btn:hover{
+    background-color: #333;
+  }
+  .already a{
+    text-decoration: none;
+    margin-left: 4px;
+    color: #000;
+  }
+  .already a:hover{
+    color: cornflowerblue;
+  }
+  .sign-up_background{
+    flex: 2;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .slideshow{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .slideshow img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .slideshow img.active {
+    opacity: 1;
+  }
+  
+  

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup | Waterbodies</title>
+  <link rel="stylesheet" href="./styles/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="login_container">
+      <section class="login_section">
+        <h1> Welcome Back !</h1>
+        <p>Please Enter Your Credentials</p>
+        <button type="submit" class="google-login">
+          <img src="./images/7123025_logo_google_g_icon.png" alt="google-icon">
+          LogIn with Google
+        </button>
+
+        <form action="">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input  type="email" id="email" required placeholder="Enter your Email ">
+          </div>
+          <div class="form-group">
+            <label for="psswrd">Password</label>
+            <input type="password" id="psswrd"placeholder="Password " required>
+          </div>
+          <div class="term-section">
+            <input type="checkbox" name="" id="terms">
+            <p>I accepted all terms & conditions</p>
+          </div>
+        </form>
+
+        <a href="index.html"><button type="button" class="sign-up_btn">Log In</button></a> 
+      </section>
+
+      <section class="sign-up_background">
+        <div class="slideshow">
+          <img src="./images/beautiful-park_1127-3054.jpg" alt="beautiful-park">
+          <img src="./images/lagoons.jpg" alt="">
+          <img src="./images/lakes-1.jpg" alt="">
+        </div>
+        
+      </section>
+  </main>
+  <script>
+    const images = document.querySelectorAll('.slideshow img');
+    let currentIndex = 0;
+
+    function showNextImage() {
+      // Hide the current image
+      images[currentIndex].classList.remove('active');
+
+      // Move to the next image
+      currentIndex = (currentIndex + 1) % images.length;
+
+      // Show the next image
+      images[currentIndex].classList.add('active');
+    }
+
+    // Change image every 5 seconds
+    setInterval(showNextImage, 5000);
+  </script>
+</body>
+</html>
