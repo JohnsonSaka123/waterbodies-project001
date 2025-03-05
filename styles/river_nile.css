@@ -1,4 +1,7 @@
 /* CSS for Individual Rivers Page */
+body{
+  height: 100vh;
+}
 header{
   color: #ffff;
   background-color: #0077B6;
@@ -48,7 +51,7 @@ header ul a:hover{
   background-position: center;
   background-size: cover;
   animation: slideshow 15s infinite;
-  margin-bottom: 20rem;
+  margin-top: 3rem;
 }
 
 .overlay{
@@ -73,6 +76,7 @@ header ul a:hover{
   margin-bottom: 20px;
   font-family: "Poppins",
     serif;
+  text-align: center;
 }
 
 .btn{
@@ -119,108 +123,9 @@ header ul a:hover{
   }
 }
 
-#hero-section_rivers{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 40px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Mississippi-River-North-America.jpg");
-  background-size: cover;
-  background-position: bottom center;
-  background-attachment: no-attachment;
-  width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-#hero-section_rivers p{
-  line-height: 150%;
-  font-weight: 500;
-  font-family: "Poppins",
-    serif;
-  font-size: 1.2rem;
-  text-align: center;
-  color: #E0FFFF;
-}
-#hero-section_rivers p::first-letter{
-  font-size: 2rem;
-}
 
-#hero-section_rivers h2{
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #E0FFFF;
-}
-.featured-rivers{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 4rem;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.featured-rivers h2{
-  margin-bottom: 1rem;
-  font-weight: 700;
-  line-height: 150%;
-  font-family: "Lato",
-    serif;
-  font-style: normal;
-}
-.list-of-rivers{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.list-of-rivers .card{
-  max-width: 300px;
-  height: 500px;
-  width: 100%;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  font-family: "Poppins",
-    serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 8px;
-  text-align: center;
-  margin-bottom: 16px;
-  cursor: pointer;
-}
-.feature-image{
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
-  display: block;
-}
-.feature-title{
-  font-size: 1.5rem;
-  margin: 16px 0 8px 0;
-}
-.feature-descrip{
-  line-height: 1.5;
-  font-size: 1rem;
-  margin: 0 16px 16px 16px;
-}
-.feature-btn{
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-  background-color: #90E0EF;
-  padding: 8px 16px;
-  margin-bottom: 1rem;
-}
-.feature-btn:hover{
-  background-color: #72c5f2;
-  color: #fff;
-}
+
+
 
 .video-section{
   display: inline-block;
@@ -385,8 +290,11 @@ header ul a:hover{
   padding: 10px 20px;
   font-size: 1rem;
  }
+ .hero-section{
+  height: 100vh;
+ }
 
- .hero-section_rivers h2{
+ /*.hero-section_rivers h2{
   font-size: 2rem;
   margin-bottom: 10px;
  }
@@ -409,7 +317,7 @@ header ul a:hover{
  .feature-btn{
   font-size: 0.8rem;
   padding: 5px 10px;
- }
+ }*/
 }
 
 @media(max-width: 480px){
@@ -424,7 +332,9 @@ header ul a:hover{
     margin-right: 15px;
     text-align: center;
   }
-  
+  .hero-section{
+    margin-top: 50px;
+  }
   
   
 }
