@@ -1,7 +1,4 @@
 /* CSS for Individual Rivers Page */
-body{
-  height: 100vh;
-}
 header{
   color: #ffff;
   background-color: #0077B6;
@@ -332,7 +329,7 @@ header ul a:hover{
     margin-right: 15px;
     text-align: center;
   }
-  .hero-section{
+  .hero-section {
     margin-top: 50px;
   }
   
