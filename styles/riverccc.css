@@ -116,7 +116,7 @@ header ul a:hover{
   background-position: bottom center;
   background-attachment: no-attachment;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 #hero-section_rivers p{
@@ -124,12 +124,12 @@ header ul a:hover{
   font-weight: 500;
   font-family: "Poppins",
     serif;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   text-align: center;
   color: #E0FFFF;
 }
 #hero-section_rivers p::first-letter{
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 #hero-section_rivers h2{

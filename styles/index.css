@@ -62,11 +62,11 @@ header ul a:hover{
   padding: 20px;
 }
 .overlay h1{
-  font-size: 2.5rem;
+  font-size: 2.7rem;
   margin-bottom: 10px;
 }
 .overlay p{
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
   font-family: "Poppins",
     serif;
@@ -77,14 +77,14 @@ header ul a:hover{
   padding: 12px 24px;
   font-family: "Poppins",
     serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 
   border-radius: 4px;
 }
 
 
 @keyframes slideshow {
-  0% {
+  10% {
     background-image: url('../images/lakes-1.jpg');
   }
 
@@ -114,26 +114,27 @@ header ul a:hover{
   background-position: justify;
   background-attachment: no-attachment;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
 }
 #about-section p{
   line-height: 150%;
   font-weight: 500;
   font-family: "Poppins",
     serif;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   text-align: center;
   color: #E0FFFF;
 }
 #about-section p::first-letter{
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 #about-section h2{
   font-weight: 700;
   font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #E0FFFF;
+  margin-bottom: 15px;
+  color: #bef3f3;
 }
 .featured-waterbodies{
   display: flex;
@@ -145,8 +146,8 @@ header ul a:hover{
   padding-right: 5px;
 }
 .featured-waterbodies h2{
-  margin-bottom: 1rem;
-  font-weight: 700;
+  margin-bottom: 3rem;
+  font-weight: 800;
   line-height: 150%;
   font-family: "Lato",
     serif;
