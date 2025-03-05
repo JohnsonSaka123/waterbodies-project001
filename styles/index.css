@@ -242,6 +242,10 @@ header ul a:hover{
   font-family: "Roboto",
     sans-serif;
 }
+.policy-section ul li a:hover{
+  color: #90E0EF;
+  border-bottom: 2px solid #90E0EF;
+}
 
 .footer-2{
   color: #fff;
