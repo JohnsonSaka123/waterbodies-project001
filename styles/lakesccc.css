@@ -1,4 +1,4 @@
-/* CSS Template for Individual Rivers Page */
+/* CSS for lakes main page */
 header{
   color: #ffff;
   background-color: #0077B6;
@@ -41,7 +41,7 @@ header ul a:hover{
   display: none;
 }
 
-.hero-section{
+/*.hero-section{
   display: relative;
   width: 100%;
   height: 80vh;
@@ -82,9 +82,9 @@ header ul a:hover{
 
   border-radius: 4px;
 }
+*/
 
-
-@keyframes slideshow {
+/*@keyframes slideshow {
   0% {
     background-image: url('../images/lakes-1.jpg');
   }
@@ -101,6 +101,7 @@ header ul a:hover{
     background-image: url('../images/River-1.jpg');
   }
 }
+  */
 
 #hero-section_rivers{
   display: flex;
@@ -116,7 +117,7 @@ header ul a:hover{
   background-position: bottom center;
   background-attachment: no-attachment;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 #hero-section_rivers p{
@@ -124,12 +125,12 @@ header ul a:hover{
   font-weight: 500;
   font-family: "Poppins",
     serif;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   text-align: center;
   color: #E0FFFF;
 }
 #hero-section_rivers p::first-letter{
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 #hero-section_rivers h2{
@@ -164,7 +165,7 @@ header ul a:hover{
 }
 .list-of-rivers .card{
   max-width: 300px;
-  height: 500px;
+  height: 550px;
   width: 100%;
   overflow: hidden;
   border: 1px solid #ddd;
