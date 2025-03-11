@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LogIn | Waterbodies</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCHJcWoLfFhCqkjGGwuAYgmVHwxtlzvaU&callback=initMap" async defer></script>
   <link rel="stylesheet" href="./styles/login.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +27,7 @@
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input  type="email" id="username"  placeholder="Enter your Email" name="email">
+            <input  type="email" id="email"  placeholder="Enter your Email" name="email">
           </div>
           <div class="form-group">
             <label for="psswrd">Password</label>
@@ -42,6 +43,8 @@
         <p class="error" id="error-message"></p>
       </section>
 
+      
+      <div id="map"><h2>Your Live Location</h2></div>
       <section class="sign-up_background">
         <div class="slideshow">
           <img src="./images/beautiful-park_1127-3054.jpg" alt="beautiful-park">
@@ -51,22 +54,25 @@
         
       </section>
   </main>
+
   <script>
     function checkLogin() {
         const fixedUsername = "admin";  // Set your fixed username
+        const fixedEmail = "ofosum4@gmail.com"; // Set your email
         const fixedPassword = "password123"; // Set your fixed password
 
         let enteredUsername = document.getElementById("username").value;
+        let enteredEmail = document.getElementById("email").value;
         let enteredPassword = document.getElementById("psswrd").value;
+        
 
-        if (enteredUsername === fixedUsername && enteredPassword === fixedPassword) {
+        if (enteredUsername === fixedUsername && enteredEmail === fixedEmail && enteredPassword === fixedPassword ) {
             window.location.href = "./index.html"; // Redirect to another page after login
         } else {
             document.getElementById("error-message").textContent = "Invalid username or password!";
         }
     }
-</script>
-  <script>
+
     const images = document.querySelectorAll('.slideshow img');
     let currentIndex = 0;
 
@@ -83,6 +89,37 @@
 
     // Change image every 5 seconds
     setInterval(showNextImage, 5000);
+
+    function initMap() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(
+                    function (position) {
+                        var userLocation = {
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude
+                        };
+
+                        var map = new google.maps.Map(document.getElementById("map"), {
+                            zoom: 15,
+                            center: userLocation
+                        });
+
+                        var marker = new google.maps.Marker({
+                            position: userLocation,
+                            map: map,
+                            title: "You are here"
+                        });
+                    },
+                    function () {
+                        alert("Geolocation failed!");
+                    }
+                );
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+
   </script>
 </body>
 </html>

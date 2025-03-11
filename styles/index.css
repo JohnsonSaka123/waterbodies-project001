@@ -172,7 +172,7 @@ header ul a:hover{
   cursor: pointer;
 }
 .feature-image{
-  height: 200px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
 }

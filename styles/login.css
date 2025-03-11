@@ -120,6 +120,12 @@
     overflow: hidden;
     border-radius: 8px;
   }
+
+  #map {
+    height: 500px;
+    width: 30%;
+}
+
   .slideshow{
     width: 100%;
     height: 100%;
