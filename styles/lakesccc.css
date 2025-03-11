@@ -103,7 +103,7 @@ header ul a:hover{
 }
   */
 
-#hero-section_rivers{
+#hero-section_lakes{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,7 +120,7 @@ header ul a:hover{
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
-#hero-section_rivers p{
+#hero-section_lakes p{
   line-height: 150%;
   font-weight: 500;
   font-family: "Poppins",
@@ -129,17 +129,17 @@ header ul a:hover{
   text-align: center;
   color: #E0FFFF;
 }
-#hero-section_rivers p::first-letter{
+#hero-section_lakes p::first-letter{
   font-size: 3.5rem;
 }
 
-#hero-section_rivers h2{
+#hero-section_lakes h2{
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #E0FFFF;
 }
-.featured-rivers{
+.featured-lakes{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,7 +148,7 @@ header ul a:hover{
   padding-left: 5px;
   padding-right: 5px;
 }
-.featured-rivers h2{
+.featured-lakes h2{
   margin-bottom: 1rem;
   font-weight: 700;
   line-height: 150%;
@@ -156,14 +156,14 @@ header ul a:hover{
     serif;
   font-style: normal;
 }
-.list-of-rivers{
+.list-of-lakes{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   flex-wrap: wrap;
 }
-.list-of-rivers .card{
+.list-of-lakes .card{
   max-width: 300px;
   height: 550px;
   width: 100%;

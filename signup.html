@@ -20,6 +20,15 @@
         </button>
 
         <form action="">
+          <form action="upload.php" method="POST" enctype="multipart/form-data">
+            <label for="imageUpload">
+                <img id="imagePreview" src="./images/avatar.png" alt="Click Here To Upload Image" width="110" height="80" style="cursor: pointer; border: 2px dashed #ccc; display: inline-block;"/>
+            </label>
+            <input type="file" name="image" id="imageUpload" accept="image/*" style="display: none;" required>
+            <br>
+            <button type="submit">Upload</button>
+        </form>
+        
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" required placeholder="Enter your name" required>
@@ -56,6 +65,15 @@
       </section>
   </main>
   <script>
+    // Show preview when an image is selected
+    document.getElementById('imageUpload').addEventListener('change', function(event) {
+                var reader = new FileReader();
+                reader.onload = function() {
+                    document.getElementById('imagePreview').src = reader.result;
+                }
+                reader.readAsDataURL(event.target.files[0]);
+            });
+
     const images = document.querySelectorAll('.slideshow img');
     let currentIndex = 0;
 
