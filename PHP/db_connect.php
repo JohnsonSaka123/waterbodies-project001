@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "Phoenix@4583";
 $dbname = "my_waterbodies_website";
 
 // Create connection
