@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rivers</title>
-  <link rel="stylesheet" href="./styles/lakesccc.css">
+  <link rel="stylesheet" href="./styles/riverccc.css">
   <link rel="stylesheet" href="./styles/base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +13,16 @@
 </head>
 <body>
   <header>
-    <h1 class="logo"><a href="index.html">WaterBodies</a></h1>
+    <h1 class="logo"><a href="index.php">WaterBodies</a></h1>
     <nav id="nav-menu">
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./contact.php">Contact</a></li>
       </ul>
     </nav>
     <!--Harmburger menu-->
@@ -46,7 +46,7 @@
           <h3 class="feature-title">River Nile</h3>
           <p class="feature-descrip">The Nile is the longest river in Africa , World's biggest and among the most magnificent rivers. It is located in northern Africa, stretching 4,132 kilometers, though this has been contested by research suggesting that the Amazon River is slightly longer.
           </p>
-          <a href="./river_nile.html"><button type="button" class="feature-btn">Learn More</button></a>
+          <a href="./river_nile.php"><button type="button" class="feature-btn">Learn More</button></a>
       </div>
 
       <div class="card" id="card-2">
@@ -81,13 +81,13 @@
       </div>
       <div class="nav-links_main">
         <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./contact.php">Contact</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
         </ul>
       </div>
 

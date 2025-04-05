@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lake Moraine</title>
-  <link rel="stylesheet" href="./styles/lake_moraine.css">
+  <title>River Nile</title>
+  <link rel="stylesheet" href="./styles/river_nile.css">
   <link rel="stylesheet" href="./styles/base.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +13,16 @@
 </head>
 <body>
   <header>
-    <h1 class="logo"><a href="index.html">WaterBodies</a></h1>
+    <h1 class="logo"><a href="index.php">WaterBodies</a></h1>
     <nav id="nav-menu">
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./contact.php">Contact</a></li>
       </ul>
     </nav>
     <!--Harmburger menu-->
@@ -35,8 +35,14 @@
 
   <main class="hero-section">
     <div class="overlay">
-      <h1>The Lake Moraine(Canada)</h1>
-      <p>Moraine Lake is a snow and glacially fed lake in Banff National Park, 14 kilometres outside the village of Lake Louise, Alberta, Canada. It is situated in the Valley of the Ten Peaks, at an elevation of approximately 1,884 metres. The lake has a surface area of 50 hectares.</p>
+      <h1>The Nile (Egypt)</h1>
+      <p>The Nile is a major north-flowing river in northeastern Africa. It flows into the Mediterranean Sea. The Nile is the longest river in Africa. It has historically been considered the longest river in the world, though this has been contested by research suggesting that the Amazon River is slightly longer. Wikipedia
+        Sources: Blue Nile River, White Nile, Atbarah
+        Length: 6,650 km
+        Mouth: Mediterranean Sea
+        Cities: Cairo, Khartoum, Jinja, Juba
+        Countries: Egypt, Sudan
+        Discharge: 2,830 m³/s.</p>
     </div>
   </main>
 
@@ -72,13 +78,13 @@
       </div>
       <div class="nav-links_main">
         <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./contact.php">Contact</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
         </ul>
       </div>
 

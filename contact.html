@@ -13,16 +13,16 @@
 </head>
 <body>
   <header>
-    <h1 class="logo"><a href="index.html">WaterBodies</a></h1>
+    <h1 class="logo"><a href="index.php">WaterBodies</a></h1>
     <nav id="nav-menu">
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./contact.php">Contact</a></li>
       </ul>
     </nav>
     <!--Harmburger menu-->

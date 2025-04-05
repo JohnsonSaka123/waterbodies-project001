@@ -13,16 +13,16 @@
 </head>
 <body>
   <header>
-    <h1 class="logo"><a href="index.html">WaterBodies</a></h1>
+    <h1 class="logo"><a href="index.php">WaterBodies</a></h1>
     <nav id="nav-menu">
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./contact.php">Contact</a></li>
       </ul>
     </nav>
     <!--Harmburger menu-->
@@ -46,27 +46,27 @@
           <h3 class="feature-title">Lake Moraine</h3>
           <p class="feature-descrip">Moraine Lake is a snow and glacially fed lake in Banff National Park, 14 kilometres outside the village of Lake Louise, Alberta, Canada.
           </p>
-          <a href="./lake_moraine.html"><button type="button" class="feature-btn">Learn More</button></a>
+          <a href="./lake_moraine.php"><button type="button" class="feature-btn">Learn More</button></a>
       </div>
 
       <div class="card" id="card-2">
           <img src="./images/lakes/Lake_Como4.jpeg" alt="Lakes" class="feature-image">
           <h3 class="feature-title">Lake Como</h3>
-          <p class="feature-descrip">Lake Como, in Northern Italy’s Lombardy region, is an upscale resort area known for its dramatic scenery, set against the foothills of the Alps. The lake is shaped like an upside-down Y, with three slender branches that meet at the resort town of Bellagio. </p>
+          <p class="feature-descrip">Lake Como, in Northern Italy’s Lombardy region, is an upscale resort area known for its dramatic scenery, set against the foothills of the Alps.</p>
           <button type="button" class="feature-btn">Learn More</button>
       </div>
 
       <div class="card" id="card-3">
           <img src="./images/lakes/lake_ohrid5.jpeg" alt="Lagoons" class="feature-image">        
           <h3 class="feature-title">Lake Ohrid</h3>
-          <p class="feature-descrip">Lake Ohrid is a lake which straddles the mountainous border between the southwestern part of North Macedonia and eastern Albania. It is one of Europe's deepest and oldest lakes, with a unique aquatic ecosystem of worldwide importance, with more than 200 endemic species.</p>
+          <p class="feature-descrip">Lake Ohrid is a lake which straddles the mountainous border between the southwestern part of North Macedonia and eastern Albania.</p>
           <button type="button" class="feature-btn">Learn More</button>
       </div>
 
       <div class="card" id="card-4">
           <img src="./images/lakes/Lake_Garda6.jpeg" alt="Waterfalls" class="feature-image">        
           <h3 class="feature-title">Lake Garda</h3>
-          <p class="feature-descrip"> Lake Garda, in northern Italy, is known for its crystal clear water. At the south end, the town of Sirmione is dominated by the Rocca Scaligera, a fortress with harbor views. The nearby Grotte di Catullo archaeological site includes a Roman villa. On the lake's western shore, in Gardone Riviera, is Il Vittoriale degli Italiani, former home of poet d’Annunzio. The Dolomites frame Riva del Garda, a resort in the north.</p>
+          <p class="feature-descrip"> Lake Garda, in northern Italy, is known for its crystal clear water. At the south end, the town of Sirmione is dominated by the Rocca Scaligera.</p>
           <button type="button" class="feature-btn">Learn More</button>
       </div>
       
@@ -81,13 +81,13 @@
       </div>
       <div class="nav-links_main">
         <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./contact.php">Contact</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
         </ul>
       </div>
 

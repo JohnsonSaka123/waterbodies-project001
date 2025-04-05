@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waterbodies | World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="./styles/index.css">
+<link rel="stylesheet" href="./styles/base.css">
+</head>
+<body>
+  <header>
+    <h1 class="logo"><a href="./index.php">WaterBodies</a></h1>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./contact.php">Contact</a></li>
+        <li><a href="./ssss.php">Get started</a></li>
+      </ul>
+    </nav>
+    <!--Harmburger menu-->
+    <div class="harmburger" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!--hero section-->
+
+  <main class="hero-section">
+    <div class="overlay">
+      <h1>Explore the Beauty of World's Major Waterbodies</h1>
+      <p>Discover the rivers, lakes, waterfalls, and lagoons that shape World's natural beauty.</p>
+      <a href="./about.php" class="btn">Learn More</a>
+    </div>
+  </main>
+
+  <section id="about-section">
+    <h2>Overview</h2>
+    <p>Welcome to Waterbodies – your go-to resource for exploring the world's lakes, rivers, oceans, and ponds! Whether you're a nature lover, researcher, or just curious, we’re here to share stunning visuals, insightful stories, and up-to-date information about these incredible aquatic ecosystems. Dive in and discover the beauty and importance of waterbodies across the globe!</p>
+  </section>
+
+  <section class="featured-waterbodies">
+
+    <h2>Featured Waterbodies</h2>
+
+    <div class="list-of-waterbodies">
+      <div class="card" id="card-1">
+          <img src="./images/River-1.jpg" alt="Rivers" class="feature-image">
+          <h3 class="feature-title">Rivers</h3>
+          <p class="feature-descrip">Rivers are the lifeblood of our planet, weaving through landscapes, nurturing ecosystems, and connecting communities.</p>
+          <a href="./rivers.php"><button type="button" class="feature-btn">Learn More</button></a>
+        
+      </div>
+      <div class="card" id="card-2">
+          <img src="./images/lakes-1.jpg" alt="Lakes" class="feature-image">
+          <h3 class="feature-title">Lakes</h3>
+          <p class="feature-descrip">Lakes are nature’s serene mirrors, reflecting the beauty of their surroundings while sustaining diverse ecosystems and human life.</p>
+          <button type="button" class="feature-btn">Learn More</button>
+      </div>
+      <div class="card" id="card-3">
+        
+          <img src="./images/lagoons.jpg" alt="Lagoons" class="feature-image">
+        
+        
+          <h3 class="feature-title">Lagoons</h3>
+          <p class="feature-descrip">Lagoons are calm coastal areas that support diverse marine life,offering tranquil beauty and connect land with sea, creating natural sanctuaries.</p>
+          <button type="button" class="feature-btn">Learn More</button>
+        
+      </div>
+      <div class="card" id="card-4">
+          <img src="./images/waterfalls.jpg" alt="Waterfalls" class="feature-image">
+        
+        
+          <h3 class="feature-title">Waterfalls</h3>
+          <p class="feature-descrip">Waterfalls are nature’s spectacular wonders, cascading down landscapes with breathtaking force and elegance.</p>
+          <button type="button" class="feature-btn">Learn More</button>
+      </div>
+      
+    </div>
+
+  </section>
+
+  <section class="footer">
+    <div class="footer-1">
+      <div class="logo-footer">
+        <h1>WaterBodies</h1>
+      </div>
+      <div class="nav-links_main">
+        <ul>
+        <li><a href="./index.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./contact.php">Contact</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
+        </ul>
+      </div>
+
+      <div class="policy-section">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="footer-2">
+      <p>&copy; 2025 Group 8 || Waterbodies. All right reserved</p>
+    </div>
+    
+  </section>
+
+  <script src="./scripts/index.js"></script>
+</body>
+</html>

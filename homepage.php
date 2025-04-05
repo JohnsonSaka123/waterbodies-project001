@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("db_connect.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,20 +20,66 @@
 </head>
 <body>
   <header>
-    <h1 class="logo"><a href="./index.html">WaterBodies</a></h1>
+    <h1 class="logo"><a href="./index.php">WaterBodies</a></h1>
+    <div class="search-bar">
+      <form action="./search.php" method="GET">
+        <input type="text" name="query" placeholder="Search..." required>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
     <nav id="nav-menu">
       <ul>
-        <li><a href="./index.html">Home</a></li>
+        <li><a href="./homepage.php">Home</a></li>
         <li><a href="#about-section">About</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./login.html">Login</a></li>
-        <li><a href="./signup.html">Get started</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./feedback.php">Contact</a></li>
       </ul>
+
+      <div class="profile-dropdown">
+        <div class="profile-dropdown-btn">
+          <div class="profile-img">
+            <i class="fa-solid fa-circle"></i>
+          </div>
+          <span>
+            Username
+          <i class="fa-solid fa-angle-down"></i>
+          </span>
+        </div>
+
+        <ul class="profile-dropdown-list">
+          <li class="profile-dropdown-list-item">
+            <a href="./profile.php">
+              <i class="fa-regular fa-edit"></i>
+              Edit Profile
+            </a>
+          </li>
+          <li class="profile-dropdown-list-item">
+            <a href="./profile.php">
+              <i class="fa-regular fa-envelope"></i>
+              Inbox
+            </a>
+          </li>
+          <li class="profile-dropdown-list-item">
+            <a href="./profile.php">
+              <i class="fa-solid fa-sliders"></i>
+              Settings
+            </a>
+          </li>
+          <li class="profile-dropdown-list-item">
+            <a href="./logout.php">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              Logout
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+
     </nav>
+    
     <!--Harmburger menu-->
     <div class="harmburger" onclick="toggleMenu()">
       <i class="fa-solid fa-bars"></i>
@@ -41,7 +92,7 @@
     <div class="overlay">
       <h1>Explore the Beauty of World's Major Waterbodies</h1>
       <p>Discover the rivers, lakes, waterfalls, and lagoons that shape World's natural beauty.</p>
-      <a href="./about.html" class="btn">Learn More</a>
+      <a href="./about.php" class="btn">Learn More</a>
     </div>
   </main>
 
@@ -59,7 +110,7 @@
           <img src="./images/River-1.jpg" alt="Rivers" class="feature-image">
           <h3 class="feature-title">Rivers</h3>
           <p class="feature-descrip">Rivers are the lifeblood of our planet, weaving through landscapes, nurturing ecosystems, and connecting communities.</p>
-          <a href="./rivers.html"><button type="button" class="feature-btn">Learn More</button></a>
+          <a href="./rivers.php"><button type="button" class="feature-btn">Learn More</button></a>
         
       </div>
       <div class="card" id="card-2">
@@ -98,13 +149,13 @@
       </div>
       <div class="nav-links_main">
         <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./rivers.html">Rivers</a></li>
-        <li><a href="./lakes.html">Lakes</a></li>
-        <li><a href="./lagoons.html">Lagoons</a></li>
-        <li><a href="./Waterfalls.html">Waterfalls</a></li>
+        <li><a href="./homepage.php">Home</a></li>
+        <li><a href="./about.php">About</a></li>
+        <li><a href="./contact.php">Contact</a></li>
+        <li><a href="./rivers.php">Rivers</a></li>
+        <li><a href="./lakes.php">Lakes</a></li>
+        <li><a href="./lagoons.php">Lagoons</a></li>
+        <li><a href="./Waterfalls.php">Waterfalls</a></li>
         </ul>
       </div>
 

@@ -20,27 +20,29 @@
           LogIn with Google
         </button>
 
-        <form action="insert.php" method="POST">
+        <form action="" method="POST">
           <div class="form-group">
             <label for="name">Username</label>
-            <input  type="text" id="username"  placeholder="Enter your Username" name="name">
+            <input  type="text" id="username"  placeholder="Enter your Username" name="name" required>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input  type="email" id="email"  placeholder="Enter your Email" name="email">
+            <input  type="email" id="email"  placeholder="Enter your Email" name="email" required>
           </div>
           <div class="form-group">
             <label for="psswrd">Password</label>
             <input type="password" id="psswrd" placeholder="Password " name="password" required>
           </div>
           <div class="term-section">
-            <input type="checkbox" name="" id="terms">
+            <input type="checkbox" name="check" id="terms" required>
             <p>I accepted all terms & conditions</p>
           </div>
         </form>
 
-        <button type="button" class="sign-up_btn" onclick="checkLogin()">Log In</button>
+        <button type="button" class="sign-up_btn">Log In</button>
         <p class="error" id="error-message"></p>
+        <p class="already">Don't have an account?<a href="./signup.php"><u>SignUp</u></a></p>
+      </section>
       </section>
 
       
@@ -56,7 +58,7 @@
   </main>
 
   <script>
-    function checkLogin() {
+    /* function checkLogin() {
         const fixedUsername = "admin";  // Set your fixed username
         const fixedEmail = "ofosum4@gmail.com"; // Set your email
         const fixedPassword = "password123"; // Set your fixed password
@@ -67,11 +69,11 @@
         
 
         if (enteredUsername === fixedUsername && enteredEmail === fixedEmail && enteredPassword === fixedPassword ) {
-            window.location.href = "./index.html"; // Redirect to another page after login
+            window.location.href = "./index.php"; // Redirect to another page after login
         } else {
             document.getElementById("error-message").textContent = "Invalid username or password!";
         }
-    }
+    }*/
 
     const images = document.querySelectorAll('.slideshow img');
     let currentIndex = 0;
@@ -89,6 +91,7 @@
 
     // Change image every 5 seconds
     setInterval(showNextImage, 5000);
+
 
     function initMap() {
             if (navigator.geolocation) {
