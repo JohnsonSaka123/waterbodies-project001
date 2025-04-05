@@ -10,13 +10,11 @@ include("db_connect.php");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Waterbodies | World</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-<link rel="stylesheet" href="./styles/index.css">
-<link rel="stylesheet" href="./styles/base.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/base.css">
 </head>
 <body>
   <header>
@@ -26,6 +24,7 @@ include("db_connect.php");
         <input type="text" name="query" placeholder="Search..." required>
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
+    </div>
     <nav id="nav-menu">
       <ul>
         <li><a href="./homepage.php">Home</a></li>
@@ -38,44 +37,43 @@ include("db_connect.php");
       </ul>
 
       <div class="profile-dropdown">
-        <div class="profile-dropdown-btn">
-          <div class="profile-img">
+    <button class="profile-dropdown-btn" aria-haspopup="true" aria-expanded="false" onclick="toggleMenu()">
+        <div class="profile-img">
             <i class="fa-solid fa-circle"></i>
-          </div>
-          <span>
-            Username
-          <i class="fa-solid fa-angle-down"></i>
-          </span>
         </div>
+        <span>
+            <?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Username'; ?>
+            <i class="fa-solid fa-angle-down"></i>
+        </span>
+    </button>
 
-        <ul class="profile-dropdown-list">
-          <li class="profile-dropdown-list-item">
+    <ul class="profile-dropdown-list" style="display: none;">
+        <li class="profile-dropdown-list-item">
             <a href="./profile.php">
-              <i class="fa-regular fa-edit"></i>
-              Edit Profile
+                <i class="fa-regular fa-edit"></i>
+                Edit Profile
             </a>
-          </li>
-          <li class="profile-dropdown-list-item">
-            <a href="./profile.php">
-              <i class="fa-regular fa-envelope"></i>
-              Inbox
+        </li>
+        <li class="profile-dropdown-list-item">
+            <a href="./inbox.php">
+                <i class="fa-regular fa-envelope"></i>
+                Inbox
             </a>
-          </li>
-          <li class="profile-dropdown-list-item">
-            <a href="./profile.php">
-              <i class="fa-solid fa-sliders"></i>
-              Settings
+        </li>
+        <li class="profile-dropdown-list-item">
+            <a href="./settings.php">
+                <i class="fa-solid fa-sliders"></i>
+                Settings
             </a>
-          </li>
-          <li class="profile-dropdown-list-item">
+        </li>
+        <li class="profile-dropdown-list-item">
             <a href="./logout.php">
-              <i class="fa-solid fa-arrow-right-from-bracket"></i>
-              Logout
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                Logout
             </a>
-          </li>
-
-        </ul>
-      </div>
+        </li>
+    </ul>
+</div>
 
 
     </nav>

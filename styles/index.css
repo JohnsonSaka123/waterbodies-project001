@@ -46,31 +46,33 @@ button {
   cursor: pointer;
 }
 
-.profile-dropdown {
-  position: relative;
-  width: fit-content;
+.profile-dropdown-list {
+  display: none; /* Initially hidden */
+  position: absolute; /* Position it below the button */
+  background-color: white; /* Background color */
+  border: 1px solid #ccc; /* Border */
+  z-index: 1000; /* Ensure it appears above other elements */
 }
-.profile-dropdown-btn {
-  display:flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 1rem;
-  font-size:0.9rem;
-  font-weight:500;
-  border: 1px solid var(--secondary);
-  border-radius:50px;
-  cursor:pointer;
-  width: 150px;
+
+.profile-dropdown-list-item {
+  padding: 10px; /* Padding for items */
 }
+
+.profile-dropdown-list-item a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Text color */
+}
+
+.profile-dropdown-list-item:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
 .profile-img {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     background: url(./images/avatar.png);
     background-size:cover;
-}
-.profile-dropdown-list {
-display: none;
 }
 
 .harmburger{

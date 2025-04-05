@@ -1,6 +1,13 @@
 function toggleMenu() {
-  const navMenu = document.getElementById("nav-menu");
-  navMenu.classList.toggle("active");
+  const dropdownList = document.querySelector('.profile-dropdown-list');
+  const isExpanded = dropdownList.style.display === 'block';
+
+  // Toggle display
+  dropdownList.style.display = isExpanded ? 'none' : 'block';
+
+  // Update aria-expanded attribute
+  const dropdownButton = document.querySelector('.profile-dropdown-btn');
+  dropdownButton.setAttribute('aria-expanded', !isExpanded);
 }
 
 function closeMenu(){
