@@ -19,14 +19,23 @@
           Sign up with Google
         </button>
 
+<<<<<<< HEAD:signup.php
         <form action="" method="POST">
           <div action="" method="" enctype="multipart/form-data">
+=======
+        <form action="insert.php" method="POST">
+          <form action="insert.php" method="POST" enctype="multipart/form-data">
+>>>>>>> ce3dc7c4d15b88d1682b9ee1ae9128e1f71f64ae:signup.html
             <p>Upload your profile picture</p>
             <label for="imageUpload">
                 <img id="imagePreview" src="./images/avatar.png" alt="Click Here To Upload Image" width="110" height="80" style="cursor: pointer; border: 2px dashed #ccc; display: inline-block;"/>
             </label>
             <input type="file" name="image" id="imageUpload" accept="image/*" style="display: none;" required>
+<<<<<<< HEAD:signup.php
         </div>
+=======
+        </form>
+>>>>>>> ce3dc7c4d15b88d1682b9ee1ae9128e1f71f64ae:signup.html
         
           <div class="form-group">
             <label for="name">Name</label>
@@ -50,8 +59,13 @@
           </div>
         </form>
 
+<<<<<<< HEAD:signup.php
         <input type="submit" class="sign-up_btn" value="Sign Up"> 
         <p class="already">Already have an account?<a href="./login.php"><u>Sign in</u></a></p>
+=======
+        <button type="submit" class="sign-up_btn" value="signup">Sign up</button> 
+        <p class="already">Already have an account?<a href="./login.html"><u>Sign in</u></a></p>
+>>>>>>> ce3dc7c4d15b88d1682b9ee1ae9128e1f71f64ae:signup.html
       </section>
 
       <section class="sign-up_background">
