@@ -41,10 +41,20 @@ include("db_connect.php");
         <div class="profile-img">
             <i class="fa-solid fa-circle"></i>
         </div>
-        <span>
-            <?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'Username'; ?>
+        <p>
+            Hello, <?php
+            if(isset($_SESSION['email'])){
+              $email=$_SESSION['email'];
+              $query=mysqli_query($conn,"SELECT users.* FROM `users` WHERE users.email='$email'");
+              while($row=mysqli_fetch_array($query)){
+                $username=$row['uName'];
+                echo htmlspecialchars($username);
+              }
+            } else {
+              echo "Guest";
+             ?>
             <i class="fa-solid fa-angle-down"></i>
-        </span>
+        </p>
     </button>
 
     <ul class="profile-dropdown-list" style="display: none;">
