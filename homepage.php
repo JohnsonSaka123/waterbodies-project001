@@ -52,7 +52,8 @@ include("db_connect.php");
               }
             } else {
               echo "Guest";
-             ?>
+            }
+            ?>
             <i class="fa-solid fa-angle-down"></i>
         </p>
     </button>
