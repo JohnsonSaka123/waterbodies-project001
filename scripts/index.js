@@ -1,63 +1,80 @@
-function toggleMenu() {
-  const dropdownList = document.querySelector('.profile-dropdown-list');
-  const isExpanded = dropdownList.style.display === 'block';
+// JavaScript for the profile dropdown menu
+function toggleDropdown() {
+  const dropdown = document.getElementById("profileDropdown");
+  const arrow = document.querySelector('.dropdown-arrow');
 
-  // Toggle display
-  dropdownList.style.display = isExpanded ? 'none' : 'block';
-
-  // Update aria-expanded attribute
-  const dropdownButton = document.querySelector('.profile-dropdown-btn');
-  dropdownButton.setAttribute('aria-expanded', !isExpanded);
+  dropdown.classList.toggle("show");
+  arrow.classList.toggle("rotate");
 }
 
-function closeMenu(){
+// Close dropdown when clicking outside
+window.addEventListener('click', function(event) {
+  const dropdown = document.getElementById("profileDropdown");
+  const profileElement = document.querySelector('.profile-dropdown');
+
+  if (!profileElement.contains(event.target)) {
+      dropdown.classList.remove("show");
+      document.querySelector('.dropdown-arrow').classList.remove("rotate");
+  }
+});
+
+function toggleNav() {
+  const navMenu = document.getElementById("nav-menu");
+  navMenu.classList.toggle("active");
+}
+
+function closeNav() {
   const navMenu = document.getElementById("nav-menu");
   navMenu.classList.remove("active");
 }
 
-
+// Event listeners for cards
 const card1 = document.getElementById("card-1");
 const card2 = document.getElementById("card-2");
 const card3 = document.getElementById("card-3");
 const card4 = document.getElementById("card-4");
 
-card1.addEventListener("click" , ()=> {
+if (card1) {
+  card1.addEventListener("click", () => {
+    window.location.href = "./rivers.php";
+  });
+}
 
-  window.location.href = "../rivers.php";
+if (card2) {
+  card2.addEventListener("click", () => {
+    window.location.href = "../lakes.php";
+  });
+}
 
-});
+if (card3) {
+  card3.addEventListener("click", () => {
+    window.location.href = "../lagoons.php";
+  });
+}
 
-card2.addEventListener("click" , ()=> {
+if (card4) {
+  card4.addEventListener("click", () => {
+    window.location.href = "../Waterfalls.php";
+  });
+}
 
-  window.location.href = "../lakes.php";
-
-});
-
-
-card3.addEventListener("click" , ()=> {
-
-  window.location.href = "../lagoons.php";
-
-});
-
-card4.addEventListener("click" , ()=> {
-
-  window.location.href = "../Waterfalls.php";
-
-});
-
+// Search functionality
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector("input[name='query']");
   
-  searchInput.addEventListener("keyup", function () {
+  if (searchInput) {
+    searchInput.addEventListener("keyup", function () {
       const query = this.value.trim();
       
       if (query.length > 2) { // Start searching after 3 characters
-          fetch(`search.php?query=${query}`)
-              .then(response => response.text())
-              .then(data => {
-                  document.getElementById("search-results").innerHTML = data;
-              });
+        fetch(`search.php?query=${query}`)
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById("search-results").innerHTML = data;
+          });
+      } else {
+        document.getElementById("search-results").innerHTML = ''; // Clear results if query is too short
       }
-  });
+    });
+  }
 });

@@ -1,6 +1,25 @@
 <?php
 session_start();
 include("db_connect.php");
+
+// Check if the user is logged in
+if (!isset($_SESSION['email'])) {
+    header('Location: ssss.php'); // Redirect to login page
+    exit();
+}
+
+// Retrieve user data
+$email = $_SESSION['email'];
+$query = mysqli_query($conn, "SELECT * FROM `users` WHERE email='$email'");
+$user = mysqli_fetch_array($query);
+
+if ($user) {
+    $uname = htmlspecialchars($user['uname']);
+    $profileImage = htmlspecialchars($user['image']); // Assuming this is the path to the image
+} else {
+    $uname = "Guest";
+    $profileImage = "path/to/default/image.jpg"; // Default image path
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,13 +38,8 @@ include("db_connect.php");
 <body>
   <header>
     <h1 class="logo"><a href="./index.php">WaterBodies</a></h1>
-    <div class="search-bar">
-      <form action="./search.php" method="GET">
-        <input type="text" name="query" placeholder="Search..." required>
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
-    </div>
-    <nav id="nav-menu">
+    
+    <nav class="nav-menu">
       <ul>
         <li><a href="./homepage.php">Home</a></li>
         <li><a href="#about-section">About</a></li>
@@ -34,70 +48,65 @@ include("db_connect.php");
         <li><a href="./Waterfalls.php">Waterfalls</a></li>
         <li><a href="./rivers.php">Rivers</a></li>
         <li><a href="./feedback.php">Contact</a></li>
-      </ul>
-
-      <div class="profile-dropdown">
-    <button class="profile-dropdown-btn" aria-haspopup="true" aria-expanded="false" onclick="toggleMenu()">
-        <div class="profile-img">
-            <i class="fa-solid fa-circle"></i>
-        </div>
-        <p>
-            Hello, <?php
-            if(isset($_SESSION['email'])){
-              $email=$_SESSION['email'];
-              $query=mysqli_query($conn,"SELECT users.* FROM `users` WHERE users.email='$email'");
-              while($row=mysqli_fetch_array($query)){
-                $username=$row['uName'];
-                echo htmlspecialchars($username);
-              }
-            } else {
-              echo "Guest";
-            }
-            ?>
-            <i class="fa-solid fa-angle-down"></i>
+        <li>
+          <div class="profile-dropdown">
+        <div class="upload" onclick="toggleDropdown()">
+        <img id="profileImage" src="<?php echo $profileImage; ?>" alt="Profile Picture" style="width: 40px; height: 40px; border-radius: 50%;">
+        <p>Hi, <?php echo $uname; ?>
+            <i class="fas fa-caret-down dropdown-arrow"></i>
         </p>
-    </button>
+        </div>
 
-    <ul class="profile-dropdown-list" style="display: none;">
-        <li class="profile-dropdown-list-item">
-            <a href="./profile.php">
-                <i class="fa-regular fa-edit"></i>
-                Edit Profile
-            </a>
-        </li>
-        <li class="profile-dropdown-list-item">
-            <a href="./inbox.php">
-                <i class="fa-regular fa-envelope"></i>
-                Inbox
-            </a>
-        </li>
-        <li class="profile-dropdown-list-item">
-            <a href="./settings.php">
-                <i class="fa-solid fa-sliders"></i>
-                Settings
-            </a>
-        </li>
-        <li class="profile-dropdown-list-item">
-            <a href="./logout.php">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                Logout
-            </a>
-        </li>
-    </ul>
+    <div id="profileDropdown" class="dropdown-content">
+        <a href="profile.php">
+            <i class="fa-regular fa-edit"></i>
+            Edit Profile
+        </a>
+        <a href="./inbox.php">
+            <i class="fa-regular fa-envelope"></i>
+            Inbox
+        </a>
+        <a href="./settings.php">
+            <i class="fa-solid fa-sliders"></i>
+            Settings
+        </a>
+        <a href="#.php">
+            <i class="fa-solid fa-trash"></i>
+            Delete Account
+        </a>
+        <a href="./logout.php">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            Logout
+        </a>
+    </div>
+
 </div>
-
-
+</li>
+</ul>
+  
     </nav>
     
     <!--Harmburger menu-->
-    <div class="harmburger" onclick="toggleMenu()">
+    <div class="harmburger" onclick="toggleNav()">
       <i class="fa-solid fa-bars"></i>
     </div>
   </header>
+  <div class="search-bar">
+      <form action="./search.php" method="GET">
+        <input type="text" name="query" placeholder="Search..." required>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
 
   <!--hero section-->
 
   <main class="hero-section">
+  <div class="search-bar">
+      <form action="./search.php" method="GET">
+        <input type="text" name="query" placeholder="Search..." required>
+        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </div>
     <div class="overlay">
       <h1>Explore the Beauty of World's Major Waterbodies</h1>
       <p>Discover the rivers, lakes, waterfalls, and lagoons that shape World's natural beauty.</p>
@@ -131,8 +140,7 @@ include("db_connect.php");
       <div class="card" id="card-3">
         
           <img src="./images/lagoons.jpg" alt="Lagoons" class="feature-image">
-        
-        
+                
           <h3 class="feature-title">Lagoons</h3>
           <p class="feature-descrip">Lagoons are calm coastal areas that support diverse marine life,offering tranquil beauty and connect land with sea, creating natural sanctuaries.</p>
           <button type="button" class="feature-btn">Learn More</button>
@@ -140,8 +148,7 @@ include("db_connect.php");
       </div>
       <div class="card" id="card-4">
           <img src="./images/waterfalls.jpg" alt="Waterfalls" class="feature-image">
-        
-        
+
           <h3 class="feature-title">Waterfalls</h3>
           <p class="feature-descrip">Waterfalls are nature’s spectacular wonders, cascading down landscapes with breathtaking force and elegance.</p>
           <button type="button" class="feature-btn">Learn More</button>

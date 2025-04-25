@@ -10,6 +10,7 @@
 <body>
     <div class="container" id="signUp" style="display:none;">
         <h1 class="form-title">Register <i class="fas fa-book" style="font-size: 30px;"></i></h1>
+        <br>
         <form method="post" action="insert.php">
         <div class="insert-group" enctype="multipart/form-data">
                 <label for="imageUpload">
@@ -291,6 +292,7 @@
         }
         ?>
             </div>
+            <br>
 
             <div class="input-group">
                 <i class="fas fa-lock"></i>
@@ -320,6 +322,8 @@
     </div>
 
 
+
+    
     <div class="container" id="signIn" >
         <h1 class="form-title">Sign In <i class="fas fa-handshake" style="font-size: 35px;"></i></h1>
         <form method="post" action="insert.php">

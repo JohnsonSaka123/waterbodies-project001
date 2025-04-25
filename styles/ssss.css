@@ -24,7 +24,7 @@ form{
     font-weight: bold;
     text-align: center;
     padding: 1.3rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 100rem;
 }
 input{
     color: inherit;
@@ -34,6 +34,7 @@ input{
     border-bottom: 1px solid #757575;
     padding-left: 1.5rem;
     font-size: 17px;
+    margin-bottom: 100px;
 }
 .input-group select {
     color: inherit;

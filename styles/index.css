@@ -1,37 +1,39 @@
-header{
-  color: #ffff;
+header {
+  color: #ffffff; /* Changed to full hex code for clarity */
   background-color: #0077B6;
-  display: flex;
+  display: flex; /* Changed to flex for proper alignment */
   justify-content: space-between;
   align-items: center;
   padding: 10px 16px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative; /* Changed to relative for proper stacking context */
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-header h1{
+
+header h1 {
   font-size: 28px;
   font-weight: 700;
   text-transform: uppercase;
-
 }
 
-header nav ul{
+header nav ul {
   display: flex;
   list-style: none;
-  align-items: flex-start;
   justify-content: center;
-}
-header ul a{
-  font-size: 16px;
-  font-family: "Roboto",
-    sans-serif;
-  font-weight: 500;
-  padding: 12px 13px;
+  padding: 0; /* Added to remove default padding */
+  margin: 0; /* Added to remove default margin */
 }
 
-header ul a:hover{
+header ul a {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding: 12px 13px;
+  color: #ffffff; /* Ensure text is visible on header background */
+  text-decoration: none; /* Remove underline */
+}
+
+header ul a:hover {
   color: #90E0EF;
   border-bottom: 2px solid #90E0EF;
 }
@@ -46,41 +48,98 @@ button {
   cursor: pointer;
 }
 
-.profile-dropdown-list {
-  display: none; /* Initially hidden */
-  position: absolute; /* Position it below the button */
-  background-color: white; /* Background color */
-  border: 1px solid #ccc; /* Border */
-  z-index: 1000; /* Ensure it appears above other elements */
+.profile-dropdown {
+  color: #000;
+  background-color: #f9fafa;
+  border-radius: 50px;
+  position: relative;
 }
 
-.profile-dropdown-list-item {
-  padding: 10px; /* Padding for items */
+.upload {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
 }
 
-.profile-dropdown-list-item a {
-  text-decoration: none; /* Remove underline */
-  color: black; /* Text color */
+.upload:hover {
+  background-color: #c91919; /* Change background color on hover */
 }
 
-.profile-dropdown-list-item:hover {
-  background-color: #f0f0f0; /* Highlight on hover */
+#profileImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border: 2px solid #4caf50; /* Optional: border around the profile image */
 }
 
-.profile-img {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background: url(./images/avatar.png);
-    background-size:cover;
+.dropdown-arrow {
+  margin-left: 8px;
+  color: #666;
+  transition: transform 0.3s; /* Smooth transition for rotation */
 }
 
-.harmburger{
-  display: none;
+.dropdown-content {
+  display: none; /* Hidden by default */
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 180px; /* Minimum width of the dropdown */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  padding: 10px 0; /* Padding around the dropdown items */
+  z-index: 1001; /* Ensure it appears above other elements */
+  margin-top: 10px; /* Space between the upload area and dropdown */
 }
 
-.hero-section{
-  display: relative;
+.dropdown-content a {
+  color: #333; /* Text color for links */
+  padding: 10px 20px; /* Padding for links */
+  text-decoration: none; /* Remove underline from links */
+  display: block; /* Make links block elements */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5; /* Background color on hover */
+  color: #4caf50; /* Change text color on hover */
+}
+
+.dropdown-content i {
+  margin-right: 10px; /* Space between icon and text */
+  width: 20px; /* Fixed width for icons */
+  text-align: center; /* Center align icons */
+}
+
+.show {
+  display: block; /* Show the dropdown when the class is added */
+  animation: fadeIn 0.3s; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start transparent */
+    transform: translateY(-10px); /* Start slightly above */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
+  }
+}
+
+.rotate {
+  transform: rotate(180deg); /* Rotate the dropdown arrow */
+}
+
+.harmburger {
+  display: none; /* Initially hidden, will be shown in media queries */
+}
+
+.hero-section {
+  position: relative; /* Corrected from display: relative */
   width: 100%;
   height: 80vh;
   background-position: center;
@@ -88,8 +147,8 @@ button {
   animation: slideshow 15s infinite;
 }
 
-.overlay{
-  display: absolute;
+.overlay {
+  position: absolute; /* Corrected from display: absolute */
   width: 100%;
   height: 100%;
   display: flex;
@@ -97,134 +156,130 @@ button {
   justify-content: center;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #ffff;
+  color: #ffffff; /* Changed to full hex code for clarity */
   padding: 20px;
 }
-.overlay h1{
+
+.overlay h1 {
   font-size: 2.7rem;
   margin-bottom: 10px;
 }
-.overlay p{
+
+.overlay p {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  font-family: "Poppins",
-    serif;
+  font-family: "Poppins", serif;
 }
 
-.btn{
+.btn {
   background-color: #0C7CE8;
   padding: 12px 24px;
-  font-family: "Poppins",
-    serif;
-    font-size: 1.4rem;
-
+  font-family: "Poppins", serif;
+  font-size: 1.4rem;
   border-radius: 4px;
 }
-
 
 @keyframes slideshow {
   10% {
     background-image: url('../images/lakes-1.jpg');
   }
-
   33% {
     background-image: url('../images/lagoons.jpg');
   }
-
   66% {
     background-image: url('../images/waterfalls.jpg');
   }
-
   100% {
     background-image: url('../images/River-1.jpg');
   }
 }
 
-#about-section{
+#about-section {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 40px;
+  padding: 30px; /* Combined padding */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/waterfalls.jpg");
   background-size: cover;
-  background-position: justify;
-  background-attachment: no-attachment;
   width: 100%;
   margin-bottom: 3rem;
 }
-#about-section p{
+
+#about-section p {
   line-height: 150%;
   font-weight: 500;
-  font-family: "Poppins",
-    serif;
+  font-family: "Poppins", serif;
   font-size: 1.7rem;
   text-align: center;
   color: #E0FFFF;
 }
-#about-section p::first-letter{
+
+#about-section p::first-letter {
   font-size: 3rem;
 }
 
-#about-section h2{
+#about-section h2 {
   font-weight: 700;
   font-size: 2.5rem;
   margin-bottom: 15px;
   color: #bef3f3;
 }
-.featured-waterbodies{
+
+.featured-waterbodies {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-bottom: 4rem;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 0 5px; /* Combined padding */
 }
-.featured-waterbodies h2{
+
+.featured-waterbodies h2 {
   margin-bottom: 3rem;
   font-weight: 800;
   line-height: 150%;
-  font-family: "Lato",
-    serif;
-  font-style: normal;
+  font-family: "Lato", serif;
 }
-.list-of-waterbodies{
+
+.list-of-waterbodies {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   flex-wrap: wrap;
 }
-.list-of-waterbodies .card{
+
+.list-of-waterbodies .card {
   width: 300px;
   overflow: hidden;
   border: 1px solid #ddd;
-  font-family: "Poppins",
-    serif;
+  font-family: "Poppins", serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
   margin-bottom: 16px;
   cursor: pointer;
 }
-.feature-image{
+
+.feature-image {
   height: 300px;
   width: 100%;
   object-fit: cover;
 }
-.feature-title{
+
+.feature-title {
   font-size: 1.5rem;
   margin: 16px 0 8px 0;
 }
-.feature-descrip{
+
+.feature-descrip {
   line-height: 1.5;
   font-size: 1rem;
   margin: 0 16px 16px 16px;
 }
-.feature-btn{
+
+.feature-btn {
   border: none;
   cursor: pointer;
   font-size: 1rem;
@@ -234,175 +289,168 @@ button {
   margin-bottom: 1rem;
 }
 
-.footer{
+.footer {
   background-color: #0077B6;
-  padding: 20px  16px 0 16px;
+  padding: 20px 16px 0 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 1rem;
 }
-.footer-1{
+
+.footer-1 {
   display: flex;
   width: 80%;
   justify-content: space-between;
-  
 }
-.logo-footer h1{
+
+.logo-footer h1 {
   color: #fff;
   font-weight: 700;
-  font-style: normal;
-
 }
-.nav-links_main ul li{
+
+.nav-links_main ul li {
   list-style: none;
   padding-bottom: 10px;
 }
-.nav-links_main  ul li a{
+
+.nav-links_main ul li a {
   font-weight: 500;
   font-size: 16px;
-  font-family: "Roboto",
-    sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff; /* Ensure text is visible on footer background */
 }
 
-.nav-links_main ul li a:hover{
-  color: #90E0EF;
-  border-bottom: 2px solid #90E0EF;
+.nav-links_main ul li a:hover {
+  color: #90E0EF; /* Change color on hover */
+  border-bottom: 2px solid #90E0EF; /* Add underline on hover */
 }
 
-.policy-section ul li{
+.policy-section ul li {
   list-style: none;
   padding-bottom: 10px;
 }
-.policy-section ul li a{
+
+.policy-section ul li a {
   font-weight: 500;
   font-size: 16px;
-  font-family: "Roboto",
-    sans-serif;
-}
-.policy-section ul li a:hover{
-  color: #90E0EF;
-  border-bottom: 2px solid #90E0EF;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff; /* Ensure text is visible on footer background */
 }
 
-.footer-2{
+.policy-section ul li a:hover {
+  color: #90E0EF; /* Change color on hover */
+  border-bottom: 2px solid #90E0EF; /* Add underline on hover */
+}
+
+.footer-2 {
   color: #fff;
   font-weight: 700;
   align-self: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media( max-width : 768px){
- header nav{
-  display: none;
-  width: 100%;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  background-color: #0077B6;
-  text-align: center;
- }
-
- header nav ul{
-  flex-direction: column;
-  padding: 0;
- }
- header nav ul li{
-  margin: 16px 0;
- }
-
- header ul a{
-  padding: 10px;
-  display: block;
- }
- 
- .harmburger{
-  display: block;
-  cursor: pointer;
-  font-size: 24px;
- }
- header nav.active{
-  display: block;
- }
- .overlay{
-  padding: 10px;
-  text-align: center;
- }
-
- .overlay h1{
-  font-size: 1.5rem;
- }
- .overlay p{
-  font-size: 1rem;
- }
- .btn{
-  padding: 10px 20px;
-  font-size: 1rem;
- }
-
- .about-section h2{
-  font-size: 2rem;
-  margin-bottom: 10px;
- }
- .about-section p{
-  font-size: 1rem;
-  line-height: 160%;
- }
- .list-of-waterbodies .card{
-  width: 250px;
- }
- .list-of-waterbodies {
-  gap: 15px;
- }
- .list-of-waterbodies .feature-title{
-  font-size: 1rem;
- }
- .list-of-waterbodies .feature-descrip{
-  font-size: 0.9rem;
- }
- .feature-btn{
-  font-size: 0.8rem;
-  padding: 5px 10px;
- }
-}
-
-@media(max-width: 480px){
-  header .logo{
-    font-size: 24px;
-  }
-  .footer-1{
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header nav {
+    display: none; /* Hide nav on smaller screens */
     width: 100%;
-  }
-    
-  .logo-footer h1{
-    margin-right: 15px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #0077B6;
     text-align: center;
   }
-  
-  
-  
+
+  header nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+
+  header nav ul li {
+    margin: 16px 0; /* Space between nav items */
+  }
+
+  header ul a {
+    padding: 10px;
+    display: block; /* Make links block elements */
+  }
+
+  .harmburger {
+    display: block; /* Show hamburger menu */
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  header nav.active {
+    display: block; /* Show nav when active */
+  }
+
+  .overlay {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .overlay h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .overlay p {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  .btn {
+    padding: 10px 20px; /* Adjust button padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  #about-section h2 {
+    font-size: 2rem; /* Adjust heading size */
+    margin-bottom: 10px;
+  }
+
+  #about-section p {
+    font-size: 1rem; /* Adjust paragraph size */
+    line-height: 160%; /* Adjust line height */
+  }
+
+  .list-of-waterbodies .card {
+    width: 250px; /* Adjust card width */
+  }
+
+  .list-of-waterbodies {
+    gap: 15px; /* Space between cards */
+  }
+
+  .list-of-waterbodies .feature-title {
+    font-size: 1rem; /* Adjust title size */
+  }
+
+  .list-of-waterbodies .feature-descrip {
+    font-size: 0.9rem; /* Adjust description size */
+  }
+
+  .feature-btn {
+    font-size: 0.8rem; /* Adjust button size */
+    padding: 5px 10px; /* Adjust button padding */
+  }
 }
 
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 24px; /* Adjust logo size */
+  }
+
+  .footer-1 {
+    width: 100%; /* Full width for footer */
+  }
+
+  .logo-footer h1 {
+    margin-right: 15px;
+    text-align: center; /* Center align footer logo */
+  }
+}
 
 
 
