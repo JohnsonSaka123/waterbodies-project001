@@ -65,12 +65,12 @@ button {
 }
 
 .upload:hover {
-  background-color: #c91919; /* Change background color on hover */
+  background-color: #6da4e1; /* Change background color on hover */
 }
 
 #profileImage {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   object-fit: cover; /* Ensures the image covers the area without distortion */
   border: 2px solid #4caf50; /* Optional: border around the profile image */

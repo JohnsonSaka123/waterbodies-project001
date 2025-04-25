@@ -91,12 +91,12 @@ if ($user) {
       <i class="fa-solid fa-bars"></i>
     </div>
   </header>
-  <div class="search-bar">
+  <!-- <div class="search-bar">
       <form action="./search.php" method="GET">
         <input type="text" name="query" placeholder="Search..." required>
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </form>
-    </div>
+    </div> -->
 
   <!--hero section-->
 
