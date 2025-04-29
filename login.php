@@ -20,11 +20,8 @@
           LogIn with Google
         </button>
 
-<<<<<<< HEAD:login.php
         <form action="" method="POST">
-=======
         <form action="" method="">
->>>>>>> ce3dc7c4d15b88d1682b9ee1ae9128e1f71f64ae:login.html
           <div class="form-group">
             <label for="name">Username</label>
             <input  type="text" id="username"  placeholder="Enter your Username" name="name" required>
@@ -43,15 +40,12 @@
           </div>
         </form>
 
-<<<<<<< HEAD:login.php
         <button type="button" class="sign-up_btn">Log In</button>
         <p class="error" id="error-message"></p>
         <p class="already">Don't have an account?<a href="./signup.php"><u>SignUp</u></a></p>
-=======
         <button type="button" class="sign-up_btn" //onclick="checkLogin()">Log In</button>
         <p class="error" id="error-message"></p>
         <p class="already">Don't have an account?<a href="./signup.html"><u>Sign Up</u></a></p>
->>>>>>> ce3dc7c4d15b88d1682b9ee1ae9128e1f71f64ae:login.html
       </section>
       </section>
 

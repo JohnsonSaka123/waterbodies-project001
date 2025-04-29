@@ -13,10 +13,10 @@
 </head>
 <body>
   <header>
-    <h1 class="logo"><a href="index.php">WaterBodies</a></h1>
+    <h1 class="logo"><a href="homepage.php">WaterBodies</a></h1>
     <nav id="nav-menu">
       <ul>
-        <li><a href="./index.php">Home</a></li>
+        <li><a href="./homepage.php">Home</a></li>
         <li><a href="./about.php">About</a></li>
         <li><a href="./lakes.php">Lakes</a></li>
         <li><a href="./lagoons.php">Lagoons</a></li>
@@ -81,7 +81,7 @@
       </div>
       <div class="nav-links_main">
         <ul>
-        <li><a href="./index.php">Home</a></li>
+        <li><a href="./homepage.php">Home</a></li>
         <li><a href="./about.php">About</a></li>
         <li><a href="./contact.php">Contact</a></li>
         <li><a href="./rivers.php">Rivers</a></li>
