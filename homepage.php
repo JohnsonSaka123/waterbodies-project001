@@ -48,7 +48,7 @@ if ($user) {
         <li><a href="./Waterfalls.php">Waterfalls</a></li>
         <li><a href="./rivers.php">Rivers</a></li>
         <li><a href="./feedback.php">Contact</a></li>
-        <li>
+        <!-- <li>
           <div class="profile-dropdown">
         <div class="upload" onclick="toggleDropdown()">
         <img id="profileImage" src="<?php echo $profileImage; ?>" alt="Profile Picture" style="width: 40px; height: 40px; border-radius: 50%;">
@@ -81,8 +81,40 @@ if ($user) {
     </div>
 
 </div>
-</li>
+</li> -->
 </ul>
+<div class="profile-dropdown" class="nav-menu">
+        <div class="upload" onclick="toggleDropdown()">
+        <img id="profileImage" src="<?php echo $profileImage; ?>" alt="Profile Picture" style="width: 40px; height: 40px; border-radius: 50%;">
+        <p>Hi, <?php echo $uname; ?>
+            <i class="fas fa-caret-down dropdown-arrow"></i>
+        </p>
+        </div>
+
+    <div id="profileDropdown" class="dropdown-content">
+        <a href="profile.php">
+            <i class="fa-regular fa-edit"></i>
+            Edit Profile
+        </a>
+        <a href="./inbox.php">
+            <i class="fa-regular fa-envelope"></i>
+            Inbox
+        </a>
+        <a href="./settings.php">
+            <i class="fa-solid fa-sliders"></i>
+            Settings
+        </a>
+        <a href="#.php">
+            <i class="fa-solid fa-trash"></i>
+            Delete Account
+        </a>
+        <a href="./logout.php">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            Logout
+        </a>
+    </div>
+
+</div>
   
     </nav>
     
@@ -91,15 +123,8 @@ if ($user) {
       <i class="fa-solid fa-bars"></i>
     </div>
   </header>
-  <!-- <div class="search-bar">
-      <form action="./search.php" method="GET">
-        <input type="text" name="query" placeholder="Search..." required>
-        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
-    </div> -->
 
-  <!--hero section-->
-
+    
   <main class="hero-section">
   <div class="search-bar">
       <form action="./search.php" method="GET">
