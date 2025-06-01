@@ -48,8 +48,8 @@ if ($user) {
         <li><a href="./Waterfalls.php">Waterfalls</a></li>
         <li><a href="./rivers.php">Rivers</a></li>
         <li><a href="./feedback.php">Contact</a></li>
-        <!-- <li>
-          <div class="profile-dropdown">
+        <li>
+        <div class="profile-dropdown">
         <div class="upload" onclick="toggleDropdown()">
         <img id="profileImage" src="<?php echo $profileImage; ?>" alt="Profile Picture" style="width: 40px; height: 40px; border-radius: 50%;">
         <p>Hi, <?php echo $uname; ?>
@@ -81,9 +81,9 @@ if ($user) {
     </div>
 
 </div>
-</li> -->
+</li>
 </ul>
-<div class="profile-dropdown" class="nav-menu">
+<!-- <div class="profile-dropdown" class="nav-menu">
         <div class="upload" onclick="toggleDropdown()">
         <img id="profileImage" src="<?php echo $profileImage; ?>" alt="Profile Picture" style="width: 40px; height: 40px; border-radius: 50%;">
         <p>Hi, <?php echo $uname; ?>
@@ -114,9 +114,9 @@ if ($user) {
         </a>
     </div>
 
-</div>
+</div> -->
   
-    </nav>
+</nav>
     
     <!--Harmburger menu-->
     <div class="harmburger" onclick="toggleNav()">
